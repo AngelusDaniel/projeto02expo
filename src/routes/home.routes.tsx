@@ -13,9 +13,9 @@ export default function HomeRoute() {
     <Drawer.Navigator
       screenOptions={{
         headerShown: true,
-        headerStyle: { backgroundColor: colors.brownLight },
+        headerStyle: { backgroundColor: colors.gray },
         headerTintColor: colors.white,
-        headerTitle: () => <Text style={styles.title}>Animais</Text>,
+        headerTitle: () => <Text style={styles.title}>Diário</Text>,
         drawerStyle: {
           backgroundColor: colors.brownLight,
         },
@@ -27,7 +27,7 @@ export default function HomeRoute() {
         name="AnimalStack"
         component={AnimalStack}
         options={{
-          drawerLabel: "Animais",
+          drawerLabel: "Diário",
           drawerIcon: () => (
             <MaterialCommunityIcons name="dog" size={24} color={colors.white} />
           ),
