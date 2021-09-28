@@ -16,7 +16,7 @@ export default function Home({ navigation }: AnimalTypes) {
       <Header
         hello="Olá"
         name="Usuário"
-        image={require("../../../assets/img/lazaro.png")}
+        image={require("../../../assets/img/usuario.png")}
       />
       <Text style={styles.message}>Mensagens do seu diário:</Text>
       <View>
