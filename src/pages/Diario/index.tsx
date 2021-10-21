@@ -2,32 +2,25 @@ import React from "react";
 import { useRoute } from "@react-navigation/core";
 // import { useNavigation } from "@react-navigation/core";
 import { SafeAreaView } from "react-native";
-import { Header, Vacinacao, ButtonText } from "../../components";
-import { AnimalProps } from "../../interfaces/Animal.interface";
-import { VacinaParamProps } from "../../interfaces/Vacina.interface";
-import { AnimalTypes } from "../../types/ScreenStack.types";
+import { Header, Textos, ButtonText } from "../../components";
+import { DiarioProps } from "../../interfaces/Diario.interface";
+import { TextoParamProps } from "../../interfaces/Texto.interface";
+import { DiarioTypes } from "../../types/ScreenStack.types";
 
-export default function Animal({ navigation }: AnimalTypes) {
+export default function Diario({ navigation }: DiarioTypes) {
   const route = useRoute();
-  const data = route.params as AnimalProps;
+  const data = route.params as DiarioProps;
   // const navigation = useNavigation();
-  function handleCastraAnimal() {
-    navigation.navigate("Castra", { ...data });
+
+  function handleTextoDiario() {
+    navigation.navigate("Diario", { ...data });
   }
-  function handleVacinaAnimal() {
-    navigation.navigate("Vacina", { ...data });
+
+  function textoEdit(item: TextoParamProps) {
+    navigation.navigate("Diario", { ...data, ...item });
   }
-  function castraEdit() {
-    navigation.navigate("Castra", { ...data });
-  }
-  function vacinaEdit(item: VacinaParamProps) {
-    navigation.navigate("Vacina", { ...data, ...item });
-  }
-  function castraRemove() {
-    console.log("Castra", { ...data });
-  }
-  function vacinaRemove(item: VacinaParamProps) {
-    console.log("Vacina", { ...data, ...item });
+  function textoRemove(item: TextoParamProps) {
+    console.log("Texto", { ...data, ...item });
   }
   function voltar() {
     navigation.navigate("Home");
@@ -36,12 +29,12 @@ export default function Animal({ navigation }: AnimalTypes) {
   return (
     <SafeAreaView>
       <Header name={data.title} image={data.image} />
-      <Vacinacao
-        title="Vacinação"
-        onPress={handleVacinaAnimal}
-        buttonEdit={vacinaEdit}
-        buttonRemove={vacinaRemove}
-        vacinacao={data.vacinacao}
+      <Textos
+        title="Texto"
+        onPress={handleTextoDiario}
+        buttonEdit={textoEdit}
+        buttonRemove={textoRemove}
+        texto={data.textos}
       />
       <ButtonText title="Voltar" onPress={voltar} />
     </SafeAreaView>

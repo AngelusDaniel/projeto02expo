@@ -4,43 +4,43 @@ import { useRoute } from "@react-navigation/core";
 import { Button, Header } from "../../components";
 import { StyleSheet, SafeAreaView, Text, TextInput } from "react-native";
 import {
-  VacinaParamProps,
-  VacinaPropsAnimal,
-} from "../../interfaces/Vacina.interface";
+  TextoParamProps,
+  TextoPropsDiario,
+} from "../../interfaces/Texto.interface";
 import colors from "../../styles/colors";
-import { AnimalTypes } from "../../types/ScreenStack.types";
+import { DiarioTypes } from "../../types/ScreenStack.types";
 
-export default function Vacina({ navigation }: AnimalTypes) {
+export default function Texto({ navigation }: DiarioTypes) {
   const route = useRoute();
-  const data = route.params as VacinaParamProps;
+  const data = route.params as TextoParamProps;
   console.log({ ...data });
-  const [nomeVacina, setNomeVacina] = useState(data.nome);
-  const [dataVacina, setDataVacina] = useState(data.data);
+  const [nomeTexto, setNomeTexto] = useState(data.nome);
+  const [dataTexto, setDataTexto] = useState(data.data);
   function nomeChange(item: string) {
-    setNomeVacina(item);
+    setNomeTexto(item);
   }
   function dataChange(item: string) {
-    setDataVacina(item);
+    setDataTexto(item);
   }
   // const navigation = useNavigation();
   function handleAnimal() {
-    navigation.navigate("Animal", { ...data });
+    navigation.navigate("Diario", { ...data });
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <Header name={data.title} image={data.image} />
-      <Text style={styles.text}>Vacinação</Text>
+      <Text style={styles.text}>Textos</Text>
       <TextInput
         style={styles.input}
         placeholder="nome"
-        value={nomeVacina}
+        value={nomeTexto}
         onChangeText={(text) => nomeChange(text)}
       />
       <TextInput
         style={styles.input}
         placeholder="dia/mês/ano"
-        value={dataVacina}
+        value={dataTexto}
         onChangeText={(text) => dataChange(text)}
       />
       <Button size="define" title="Salvar" onPress={handleAnimal} />

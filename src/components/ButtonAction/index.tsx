@@ -22,11 +22,11 @@ export default function ButtonAction({
 
 const styles = StyleSheet.create({
   buttonEdit: {
-    fontSize: 18,
+    fontSize: 15,
     borderRadius: 30,
     margin: 10,
     padding: 10,
-    backgroundColor: colors.blue,
+    backgroundColor: colors.white,
   },
   buttonRemove: {
     fontSize: 18,

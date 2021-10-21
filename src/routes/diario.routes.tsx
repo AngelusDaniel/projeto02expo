@@ -1,9 +1,9 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Home, Animal, Castra, Vacina } from "../pages";
-import { AnimalStackParamList } from "../types/ScreenStack.types";
+import { Home, Diario, Texto } from "../pages";
+import { DiarioStackParamList } from "../types/ScreenStack.types";
 
-const Stack = createStackNavigator<AnimalStackParamList>();
+const Stack = createStackNavigator<DiarioStackParamList>();
 
 export default function AnimalRoute() {
   return (
@@ -13,9 +13,8 @@ export default function AnimalRoute() {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Animal" component={Animal} />
-      <Stack.Screen name="Castra" component={Castra} />
-      <Stack.Screen name="Vacina" component={Vacina} />
+      <Stack.Screen name="Diario" component={Diario} />
+      <Stack.Screen name="Texto" component={Texto} />
     </Stack.Navigator>
   );
 }

@@ -13,16 +13,9 @@ export type LoginTypes = {
   navigation: LoginScreenNavigationProp
 }
 
-// Animal Stack
 export type DiarioStackParamList = {
   Home: undefined
   Diario: DiarioProps
-  Castra: {
-    title: string
-    image: ImageSourcePropType
-    castracao?: string
-    data?: string
-  }
   Texto: {
     title: string
     image: ImageSourcePropType

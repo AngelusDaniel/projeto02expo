@@ -1,15 +1,15 @@
 import React from "react";
 import { FlatList, StyleSheet, SafeAreaView, Text, View } from "react-native";
 // import { useNavigation } from "@react-navigation/core";
-import { Header, ButtonAnimal } from "../../components";
+import { Header, ButtonDiario } from "../../components";
 import data from "../../services/data";
-import { AnimalProps } from "../../interfaces/Animal.interface";
-import { AnimalTypes } from "../../types/ScreenStack.types";
+import { DiarioProps } from "../../interfaces/Diario.interface";
+import { DiarioTypes } from "../../types/ScreenStack.types";
 
-export default function Home({ navigation }: AnimalTypes) {
+export default function Home({ navigation }: DiarioTypes) {
   // const navigation = useNavigation();
-  function handleAnimal(item: AnimalProps) {
-    navigation.navigate("Animal", { ...item });
+  function handleAnimal(item: DiarioProps) {
+    navigation.navigate("Diario", { ...item });
   }
   return (
     <SafeAreaView style={styles.container}>
@@ -23,7 +23,7 @@ export default function Home({ navigation }: AnimalTypes) {
         <FlatList
           data={data}
           renderItem={({ item }) => (
-            <ButtonAnimal
+            <ButtonDiario
               key={item.id}
               title={item.title}
               onPress={() => handleAnimal(item)}

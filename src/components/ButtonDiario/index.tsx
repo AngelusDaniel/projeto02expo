@@ -18,7 +18,7 @@ export default function ButtonDiario({
 }
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.brownLight,
+    backgroundColor: colors.white,
     borderRadius: 5,
     margin: 20,
   },

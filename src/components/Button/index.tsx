@@ -17,12 +17,12 @@ export default function Button({ size, title, onPress, ...rest }: ButtonProps) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.brown,
-    borderRadius: 5,
+    backgroundColor: colors.white,
+    borderRadius: 10,
     margin: 10,
   },
   buttonSize: {
-    backgroundColor: colors.brown,
+    backgroundColor: colors.red,
     borderRadius: 5,
     margin: 10,
     width: 120,
@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     padding: 10,
-    fontSize: 18,
+    fontSize: 15,
   },
 });

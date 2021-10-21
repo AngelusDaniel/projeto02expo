@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import AnimalStack from "./animal.routes";
+import AnimalStack from "./diario.routes";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
 import { Camera, File, Map } from "../pages";
