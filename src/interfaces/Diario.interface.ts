@@ -1,12 +1,11 @@
 
 import { ImageSourcePropType } from 'react-native'
 
-export interface AnimalProps {
+export interface DiarioProps {
   id: number
   title: string
   image: ImageSourcePropType
-  castracao?: string
-  vacinacao: {
+  textos: {
     id: number
     nome: string
     data: string

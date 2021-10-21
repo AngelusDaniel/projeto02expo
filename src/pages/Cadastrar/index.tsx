@@ -18,7 +18,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView>
-        <Text style={styles.title}>Adopted</Text>
+        <Text style={styles.title}>Diário</Text>
         <View style={styles.formRow}>
           <Text style={styles.label}>Nome</Text>
           <TextInput style={styles.input} placeholder="nome"></TextInput>

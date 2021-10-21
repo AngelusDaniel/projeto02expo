@@ -2,7 +2,7 @@ import React from "react";
 import { useRoute } from "@react-navigation/core";
 // import { useNavigation } from "@react-navigation/core";
 import { SafeAreaView } from "react-native";
-import { Header, Castracao, Vacinacao, ButtonText } from "../../components";
+import { Header, Vacinacao, ButtonText } from "../../components";
 import { AnimalProps } from "../../interfaces/Animal.interface";
 import { VacinaParamProps } from "../../interfaces/Vacina.interface";
 import { AnimalTypes } from "../../types/ScreenStack.types";
@@ -36,13 +36,6 @@ export default function Animal({ navigation }: AnimalTypes) {
   return (
     <SafeAreaView>
       <Header name={data.title} image={data.image} />
-      <Castracao
-        title="Castração"
-        onPress={handleCastraAnimal}
-        buttonEdit={castraEdit}
-        buttonRemove={castraRemove}
-        data={data.castracao}
-      />
       <Vacinacao
         title="Vacinação"
         onPress={handleVacinaAnimal}

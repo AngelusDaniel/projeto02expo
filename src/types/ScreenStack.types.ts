@@ -1,6 +1,6 @@
 import { StackNavigationProp } from "@react-navigation/stack"
 import { ImageSourcePropType } from "react-native"
-import { AnimalProps } from "../interfaces/Animal.interface"
+import { DiarioProps } from "../interfaces/Diario.interface"
 
 // Login Stack
 export type LoginStackParamList = {
@@ -14,26 +14,25 @@ export type LoginTypes = {
 }
 
 // Animal Stack
-export type AnimalStackParamList = {
+export type DiarioStackParamList = {
   Home: undefined
-  Animal: AnimalProps
+  Diario: DiarioProps
   Castra: {
     title: string
     image: ImageSourcePropType
     castracao?: string
     data?: string
   }
-  Vacina: {
+  Texto: {
     title: string
     image: ImageSourcePropType
-    castracao?: string
-    vacinacao?: {
+    Textos?: {
       nome: string
       data: string
     }[]
   }
 }
-type AnimalScreenNavigationProp = StackNavigationProp<AnimalStackParamList>
-export type AnimalTypes = {
-  navigation: AnimalScreenNavigationProp
+type DiarioScreenNavigationProp = StackNavigationProp<DiarioStackParamList>
+export type DiarioTypes = {
+  navigation: DiarioScreenNavigationProp
 }

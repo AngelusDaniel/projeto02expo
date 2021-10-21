@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import { ButtonProps } from "../../interfaces/Button.interface";
 import colors from "../../styles/colors";
 
-export default function ButtonAnimal({
+export default function ButtonDiario({
   title,
   image,
   onPress,

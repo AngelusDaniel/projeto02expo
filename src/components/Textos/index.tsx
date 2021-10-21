@@ -1,27 +1,27 @@
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import {
-  VacinaParamProps,
-  VacinaProps,
-} from "../../interfaces/Vacina.interface";
+  TextoParamProps,
+  TextoProps,
+} from "../../interfaces/Texto.interface";
 import ButtonAction from "../ButtonAction";
 import { StyleSheet, View, Text } from "react-native";
 import colors from "../../styles/colors";
 import Button from "../Button";
 import { Alert } from "react-native";
 
-export default function Vacinacao({
+export default function Textos({
   title,
-  vacinacao,
+  texto,
   buttonEdit,
   buttonRemove,
   onPress,
   ...rest
-}: VacinaProps) {
-  const vacinaRemoveAlert = (item: VacinaParamProps) =>
+}: TextoProps) {
+  const TextoRemoveAlert = (item: TextoParamProps) =>
     Alert.alert(
       "Remoção",
-      "Tem certeza que deseja remover a vacina cadastrada?",
+      "Tem certeza que deseja remover o texto?",
       [
         {
           text: "Cancel",
@@ -40,8 +40,8 @@ export default function Vacinacao({
   return (
     <View style={styles.container}>
       <Text style={styles.header}>{title}</Text>
-      {vacinacao &&
-        vacinacao.map((item, index) => (
+      {texto &&
+        texto.map((item, index) => (
           <View style={styles.list} key={index}>
             <Text style={styles.text}>{item.nome}</Text>
             <Text style={styles.text}>{item.data}</Text>
@@ -55,7 +55,7 @@ export default function Vacinacao({
               </ButtonAction>
               <ButtonAction
                 type="remove"
-                onPress={() => vacinaRemoveAlert(item)}
+                onPress={() => TextoRemoveAlert(item)}
                 {...rest}
               >
                 <FontAwesome name="remove" color={colors.white} />
