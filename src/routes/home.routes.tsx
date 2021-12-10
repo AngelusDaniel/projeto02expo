@@ -29,7 +29,7 @@ export default function HomeRoute() {
         options={{
           drawerLabel: "Diário",
           drawerIcon: () => (
-            <MaterialCommunityIcons name="dog" size={24} color={colors.white} />
+            <MaterialCommunityIcons name="book" size={24} color={colors.white} />
           ),
         }}
       />

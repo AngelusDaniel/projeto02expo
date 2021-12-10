@@ -24,7 +24,7 @@ export default function Login({ navigation }: LoginTypes) {
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView>
-        <Text style={styles.title}>Adopted</Text>
+        <Text style={styles.title}>Diário Online</Text>
         <View style={styles.formRow}>
           <Text style={styles.label}>E-mail</Text>
           <TextInput style={styles.input} placeholder="e-mail"></TextInput>
@@ -33,7 +33,7 @@ export default function Login({ navigation }: LoginTypes) {
           <Text style={styles.label}>Senha</Text>
           <TextInput style={styles.input} placeholder="senha"></TextInput>
         </View>
-        <Button title="Login" onPress={handleHome} />
+        <ButtonText title="Login" onPress={handleHome}/>
         <ButtonText title="Cadastre-se" onPress={handleCadastrar} />
       </KeyboardAvoidingView>
     </View>
