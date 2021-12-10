@@ -1,4 +1,4 @@
-import React from "react";
+import React = require("react");
 import {
   View,
   Text,
@@ -33,7 +33,7 @@ export default function Login({ navigation }: LoginTypes) {
           <Text style={styles.label}>Senha</Text>
           <TextInput style={styles.input} placeholder="senha"></TextInput>
         </View>
-        <ButtonText title="Login" onPress={handleHome}/>
+        <ButtonText title="Login" onPress={handleHome} />
         <ButtonText title="Cadastre-se" onPress={handleCadastrar} />
       </KeyboardAvoidingView>
     </View>

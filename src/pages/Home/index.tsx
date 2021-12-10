@@ -1,8 +1,8 @@
-import React from "react";
+import React = require("react");
 import { FlatList, StyleSheet, SafeAreaView, Text, View } from "react-native";
 // import { useNavigation } from "@react-navigation/core";
 import { Header, ButtonDiario } from "../../components";
-import data from "../../services/data";
+import data from "../../services/data_antigo";
 import { DiarioProps } from "../../interfaces/Diario.interface";
 import { DiarioTypes } from "../../types/ScreenStack.types";
 
